@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <a *ngFor="let trainer of trainers; let i = index"
+     class="trainer"
+     [href]="trainer.instagram"
+     [style.zIndex]="i"
+     target="_blank">
+    <div class="avatar">
+      <div class="dot"></div>
+      <div class="blur" [style.background-color]="trainer.gradient.firstColor"></div>
+      <img [src]="trainer.photo" alt="">
+    </div>
+    <div class="marine" [style.background-color]="trainer.gradient.firstColor">
+      <h2>MARINE</h2>
+      <h2>BAY</h2>
+    </div>
+    <div class="text">
+      <h2>{{trainer.name}}</h2>
+      <p class="rank">Тренер {{trainer.rank}} уровня</p>
+      <!--<h3>{{trainer.description}}  [style.background]="'linear-gradient(200deg, ' + trainer.gradient.firstColor + ',' + trainer.gradient.secondColor + ')'"</h3>-->
+    </div>
+
+  </a>
+</div>
+<app-divider
+  [imageUrl]="'/assets/images/team.jpg'"
+  [text]="'Dream team!'"
+></app-divider>

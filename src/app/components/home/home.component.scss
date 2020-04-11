@@ -1,0 +1,214 @@
+.head {
+  width: 100%;
+  height: 90vh;
+  background: url("/assets/images/olga2.webp") no-repeat right bottom;
+  background-size: contain;
+  //background-position-x: 30vw;
+  color: #444444;
+
+  .logo {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    letter-spacing: 20px;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 160px;
+      color: #d10700;
+      text-shadow: 1px 1px 2px black, 0 0 1em gray;
+      font-family: AcademicM54, Helvetica, Arial, sans-serif;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 36px;
+      // text-shadow: 1px 1px 2px black, 0 0 1em gray;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 100px 0;
+
+  .title {
+    text-align: center;
+    font-size: 40px;
+    width: 30%;
+
+    h3 {
+      text-shadow: 1px 1px 1px black;
+      margin: 0;
+      padding: 0;
+
+      span {
+        font-size: 40px;
+        color: #d10700;
+        text-shadow: 1px 1px 1px #d10700;
+      }
+
+      &.smaller {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .description {
+    width: 70%;
+
+    h4 {
+      padding-right: 100px;
+      margin: 0;
+      color: #8b8b8b;
+      text-align: justify;
+    }
+  }
+}
+
+.soc-title {
+  padding-left: 120px;
+}
+
+.gallery {
+  max-width: 1712px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(6, 16.6%);
+  grid-template-rows: repeat(2, 16vw);
+
+  div {
+    overflow: hidden;
+    padding: 10px;
+    img {
+      border-radius: 4px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.location {
+  padding: 60px 120px;
+}
+
+@media (max-width: 1366px) {
+  .head {
+    //background-position-x: 20vw;
+  }
+}
+
+@media (max-width: 1365px) {
+  .head {
+    //background-position-x: 10vw;
+    background-size: contain;
+
+    .logo {
+      h1 {
+        font-size: 90px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .about {
+    padding: 40px 0;
+  }
+
+  .location {
+    padding: 24px 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .head {
+    height: 70vw;
+  }
+
+  .about {
+    .description {
+      h4 {
+        padding-right: 24px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    .title {
+      h3 {
+        font-size: 32px;
+
+        span {
+          font-size: 24px;
+        }
+
+        &.smaller {
+          font-size: 18px;
+        }
+      }
+    }
+    .description {
+      h4 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .soc-title {
+    padding-left: 40px;
+  }
+
+  .gallery {
+    div {
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .head {
+    height: 80vw;
+
+    .logo {
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+
+  .about {
+    .title {
+      h3 {
+        font-size: 28px;
+
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 25vw);
+  }
+}

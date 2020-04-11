@@ -1,0 +1,16 @@
+<div class="tabs">
+  <a *ngFor="let rout of routes" [routerLink]="rout.link">
+    <div class="header-blocks">
+      <p>{{rout.name}}</p>
+    </div>
+  </a>
+</div>
+
+<!--<div class="send" title="Связаться с нами"></div>-->
+<div #blocked class="blocked">
+  <h2>В связи с карантином, заявки временно не принимаются! Просим прощения за неудобства!</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/2000px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+       alt=""
+       (click)="blocked.style.display = 'none'"
+  >
+</div>

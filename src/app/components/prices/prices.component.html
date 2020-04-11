@@ -1,0 +1,25 @@
+<div class="switch-background">
+  <div *ngFor="let programCategory of programs"
+       [ngClass]="programCategory.id === currentType ? 'checked' : ''"
+       [style.backgroundColor]="programCategory.id === currentType ? programCategory.color : ''"
+       [style.color]="programCategory.id === currentType ? 'white' : programCategory.color"
+       class="switch-btn"
+       (click)="changeCurrentType(programCategory.id)">
+    <h2>{{programCategory.name}}</h2>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="title" [innerHTML]="programs[currentType].description"></div>
+  <div *ngFor="let program of programs[currentType].list" class="program">
+    <h3 class="level">{{program.level}}</h3>
+    <div class="name" [style.backgroundColor]="programs[currentType].color"><span>{{program.name}}</span></div>
+    <h2 class="price">{{program.price}}<span> грн.</span></h2>
+    <div class="description">
+      <h3>{{program.description}}</h3>
+    </div>
+    <div class="btn" [style.border]="'3px solid ' + programs[currentType].color" (mouseenter)="setBG($event, programs[currentType].color)"
+         (mouseleave)="clear($event)">
+      <h3>Записаться</h3>
+    </div>
+  </div>
+</div>

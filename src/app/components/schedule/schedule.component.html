@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <h2>Рассписание групповых занятий</h2>
+  <table>
+    <tr>
+        <th *ngFor="let day of ['', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ']">{{day}}</th>
+    </tr>
+    <tr *ngFor="let hour of schedule">
+      <td>{{hour.time}}:00</td>
+      <td *ngFor="let time of hour.dates" [style.color]="time.color">
+        <div
+        [style.backgroundColor]="time.name ? time.backgroundColor || 'aliceblue' : 'whitesmoke'"
+        [style.border]="time.name ? 'aliceblue 4px solid' : '' ">
+          <span>{{time.name}}</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

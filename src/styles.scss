@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + '.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@include font('SFCompact', 'assets/fonts/SFCompact/SFCompactRounded-Regular');
+@include font('AcademicM54', 'assets/fonts/AcademicM54');
+body {
+  font-family: SFCompact, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  margin: 0;
+  background-color: #f9f9f9;
+}

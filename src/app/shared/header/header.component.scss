@@ -1,0 +1,84 @@
+.tabs {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    text-decoration:  none;
+    color: gray;
+    padding: 28px;
+
+    :hover {
+      color: black;
+    }
+  }
+}
+
+.send {
+  z-index: 999;
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  width: 100px;
+  height: 100px;
+  transition: .3s;
+
+  border-radius: 50%;
+  background: url("/src/assets/images/icon-reflective.png") center no-repeat;
+  background-size: cover;
+  box-shadow: 5px 5px 20px black;
+  cursor: pointer;
+
+  color: white;
+  font-size: 18px;
+  text-align: center;
+
+  &:hover {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.blocked {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #d10700;
+  z-index: 998;
+
+  img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    a {
+      padding: 0;
+      font-size: 18px;
+    }
+  }
+
+  .send {
+    width: 60px;
+    height: 60px;
+
+    bottom: 18px;
+    right: 18px;
+  }
+}
+
+@media (max-width: 760px) { .blocked { height: 200px; } }
+@media (max-width: 550px) { .tabs { a { font-size: 14px; } } }
+@media (max-width: 400px) { .tabs { a { font-size: 12px; } } }
+@media (max-width: 360px) { .tabs { a { font-size: 10px; } } }

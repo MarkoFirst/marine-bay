@@ -1,0 +1,61 @@
+.text {
+  padding: 120px 120px 0;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 80px;
+    color: #d10700;
+    font-family: AcademicM54, Helvetica, Arial, sans-serif;
+  }
+
+  h2 {
+    text-align: justify;
+  }
+}
+
+.location {
+  padding: 60px 120px;
+}
+
+@media (max-width: 1024px) {
+  .text {
+    padding: 120px 60px 0;
+  }
+
+  .location {
+    padding: 24px 60px;
+  }
+}
+
+@media (max-width: 760px) {
+  .text {
+    padding: 60px 60px 0;
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .location {
+  }
+}
+
+@media (max-width: 560px) {
+  .text {
+    padding: 60px 24px 0;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .location {
+    padding: 24px;
+  }
+}
+
