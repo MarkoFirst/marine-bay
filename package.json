@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "ngx-swiper-wrapper": "^8.0.2",
     "rxjs": "~6.2.0",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
